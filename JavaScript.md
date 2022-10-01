@@ -48,22 +48,14 @@ HTML-DOM-Method
         <div>
             <p>這是第四個段落</p>
         </div>
-        <h1 id="demo"></h1>
         <script>
-            // 搜尋HTML頁面上所有的<p>元素，從陣列索引去訪問每個<p>元素
+            // 搜尋頁面上所有<p>元素
             var paragraph = document.getElementsByTagName('p');
-            // 從陣列的索引值訪問元素，將內容修改
-            paragraph[0].innerHTML = "這是索引值:0";
-            paragraph[1].innerHTML = "這是索引值:1";
-            paragraph[2].innerHTML = "這是索引值:2";
-            paragraph[3].innerHTML = "這是索引值:3";
 
-            // 沒有索引值:4，這行程式報錯
-            // paragraph[4].innerHTML = "我不存在";
-
-            // 可用length屬性查詢陣列中有多少<p>元素
-            var demo = document.getElementById("demo");
-            demo.innerHTML = "頁面中的p元素總共有: " + paragraph.length + "個";
+            // 使用迴圈訪問所有元素，並將內容修改
+            for(let i=0; i<paragraph.length; i++) {
+                paragraph[i].innerHTML = "這是索引值:" + i;
+            }
         </script>
     </body>
 </html>
