@@ -8,7 +8,7 @@ HTML-DOM-Method
 
 > 搜尋元素id屬性值<br />
 
-* 範例:使用 **getElementById()** 方法
+* 範例:使用 **getElementById()** 方法，修改元素的文字內容
 
 ```HTML
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ HTML-DOM-Method
 
 > 從HTML頁面上搜尋所有指定的標籤名稱
 
-* 範例:使用 **getElementsByTagName()** 方法
+* 範例:使用 **getElementsByTagName()** 方法，修改搜尋到的所有元素文字內容
 
 ```html
 <!DOCTYPE html>
@@ -65,7 +65,7 @@ HTML-DOM-Method
 
 > 從HTML頁面上搜尋所有指定class屬性值的元素
 
-* 範例:使用 **getElementsByClassName()** 方法
+* 範例:使用 **getElementsByClassName()** 方法，修改搜尋到的所有元素文字內容
 
 ```html
 <!DOCTYPE html>
@@ -96,7 +96,7 @@ HTML-DOM-Method
 
 > 從JavaScript新增元素節點
 
-* 範例:使用 **createElement()** 方法
+* 範例:使用 **createElement()** 方法，將新增的元素節點插入到頁面上
 
 ```html
 <!DOCTYPE html>
@@ -124,7 +124,7 @@ HTML-DOM-Method
 
 > 從JavaScript新增文字節點
 
-* 範例:使用 **createTextNode()** 方法
+* 範例:使用 **createTextNode()** 方法，將新增的文字節點插入到頁面上指定的元素
 
 ```html
 <!DOCTYPE html>
