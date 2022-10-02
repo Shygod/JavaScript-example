@@ -94,7 +94,7 @@ HTML-DOM-Method
 
 #### *createElement()方法*
 
-> 從JavaScript新增元素節點
+> 從HTML DOM 新增元素節點
 
 * 範例:使用 **createElement()** 方法，將新增的元素節點插入到頁面上
 
@@ -122,7 +122,7 @@ HTML-DOM-Method
 
 #### *createTextNode()方法*
 
-> 從JavaScript新增文字節點
+> 從HTML DOM 新增文字節點
 
 * 範例:使用 **createTextNode()** 方法，將新增的文字節點插入到頁面上指定的元素
 
@@ -140,6 +140,93 @@ HTML-DOM-Method
             var changeText = document.getElementById("changeText");
             var txt        = document.createTextNode("這是從JavaScript新增的文字節點");
             changeText.appendChild(txt);
+        </script>
+    </body>
+</html>
+```
+
+#### *createAttribute()方法*
+
+> 從HTML DOM 新增屬性節點
+
+* 範例:使用 **createAttribute()** 方法，將新增的屬性節點加入到元素中
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript-HTML-DOM-createAttribute-method</title>
+    </head>
+    <body>
+        <p id="demo">使用JavaScript插入class屬性</p>
+        <script>
+            // 新增屬性節點加入到<p>元素中
+            var demo = document.getElementById("demo");
+            var att = document.createAttribute('class');
+            // 定義class屬性值
+            att.value = 'democlass'
+            demo.setAttributeNode(att);
+        </script>
+    </body>
+</html>
+```
+
+#### *appendChild()方法*
+
+> 從HTML DOM 插入新的子元素
+
+* 範例:使用 **appendChild()** 方法，將元素節點插入到父元素中
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript-HTML-DOM-appendChild-method</title>
+    </head>
+    <body>
+        <p id="demo">這是一個段落</p>
+        <script>
+            // 使用appendChild()方法，插入新的子元素
+            var demo = document.getElementById("demo");
+            var new_element  = document.createElement('strong');
+            var txt          = document.createTextNode('這是新的節點');
+
+            new_element.appendChild(txt);
+            demo.appendChild(new_element);
+        </script>
+    </body>
+</html>
+```
+
+#### *insertBefore()方法*
+
+> 從HTML DOM 將已有的子節點前插入一個新的節點
+
+* 範例:使用 **insertBefore()** 方法
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript-HTML-DOM-insertBefore-method</title>
+    </head>
+    <body>
+        <div>
+            <p>這是段落 1</p>
+            <p id="p2">這是段落 2</p>
+        </div>
+        <script>
+            // 建立新的段落
+            var p2 = document.getElementById("p2");
+            var new_element = document.createElement('p');
+            var txt         = document.createTextNode("這是新的段落");
+
+            new_element.appendChild(txt);
+            // 找到段落的父節點，將新段落插入到段落2前面
+            p2.parentNode.insertBefore(new_element, p2);
         </script>
     </body>
 </html>
